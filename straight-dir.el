@@ -43,5 +43,10 @@ Returns nil to use the package name as the default."
   "Return a list of keywords used by the dir VC backend."
   nil)
 
+;;;###autoload
+(defun straight-vc-dir-push-to-remote (_recipe)
+  "Using straight.el-style RECIPE, push to primary remote, if necessary."
+  nil)
+
 (provide 'straight-dir)
 ;;; straight-dir.el ends here
