@@ -32,6 +32,32 @@
 ;;; Code:
 
 ;;;###autoload
+(defun straight-vc-dir-normalize (recipe)
+  "Using straight.el-style RECIPE, make the repository locally sane."
+  nil)
+
+;;;###autoload
+(defun straight-vc-dir-fetch-from-remote (_recipe &optional _from-upstream)
+  "Using straight.el-style RECIPE, fetch from the primary remote.
+If FROM-UPSTREAM is non-nil, fetch from the upstream remote
+instead, if the recipe configures a fork. The FROM-UPSTREAM
+argument is not part of the VC API."
+  nil)
+
+;;;###autoload
+(defun straight-vc-dir-merge-from-remote (_recipe &optional _from-upstream)
+  "Using straight.el-style RECIPE, merge from the primary remote.
+If FROM-UPSTREAM is non-nil, merge from the upstream remote
+instead, if RECIPE configures a fork. The FROM-UPSTREAM argument
+is not part of the VC API."
+  nil)
+
+;;;###autoload
+(defun straight-vc-dir-push-to-remote (_recipe)
+  "Using straight.el-style RECIPE, push to primary remote, if necessary."
+  nil)
+
+;;;###autoload
 (defun straight-vc-dir-get-commit (_local-repo)
   "Get the currently checked-out commit object, given LOCAL-REPO name string.
 Returns nil to disable VC operations."
@@ -46,11 +72,6 @@ Returns nil to use the package name as the default."
 ;;;###autoload
 (defun straight-vc-dir-keywords ()
   "Return a list of keywords used by the dir VC backend."
-  nil)
-
-;;;###autoload
-(defun straight-vc-dir-push-to-remote (_recipe)
-  "Using straight.el-style RECIPE, push to primary remote, if necessary."
   nil)
 
 (provide 'straight-dir)
